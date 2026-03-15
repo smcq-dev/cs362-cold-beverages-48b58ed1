@@ -16,4 +16,9 @@ describe 'A water dispenser' do
     expect(reservoir.current_water_volume).to eq(5)
   end
 
+  it 'can fill a water reservoir' do
+    water_dispenser.fill
+    expect(reservoir.current_water_volume).to eq(reservoir.capacity)
+  end
+
 end

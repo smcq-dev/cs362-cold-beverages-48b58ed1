@@ -31,4 +31,9 @@ describe 'A water reservoir' do
     expect(reservoir).not_to be_empty
   end
 
+  it 'can not go below 0 current_water_volume' do
+    reservoir.drain(5)
+    expect(reservoir.current_water_volume).to eq(0)
+  end
+
 end
